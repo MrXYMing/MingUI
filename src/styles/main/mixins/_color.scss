@@ -1,0 +1,5 @@
+@mixin box-color($color, $background, $border) {
+    @if $color!= null { color: $color;}
+    @if $background!= null { background-color: $background;}
+    @if $border!= null { border-color: $border;}
+  }

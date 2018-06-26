@@ -1,0 +1,118 @@
+.btn {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include user-select(none);
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font_size_md, $line-height-base, $border-radius-base);
+
+    @extend .btn_default;
+    &.disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+}
+
+//（默认样式）Default
+.btn_default {
+    @include box-color(#0070b1, #f7f7f7, $gray3);
+    &:focus,
+    &:hover {
+        @include box-color($white, $brand1, transparent);
+    }
+    &:active {
+        @include box-color($white, #346187, transparent);
+    }
+    &.disabled {
+        @include box-color(#0070b1, #f7f7f7, $gray3);
+    }
+}
+
+//（首选项）Primary
+.btn_primary {
+    @include box-color($white, #5495cd, transparent);
+    &:focus,
+    &:hover {
+        @include box-color(null, #367cb7, transparent);
+    }
+    &:active {
+        @include box-color(null, $brand1, transparent);
+    }
+    &.disabled {
+        @include box-color($white, #5495cd, transparent);
+    }
+}
+
+//（成功）Success
+.btn_success {
+    @include box-color($white, #2b7c2b, transparent);
+    &:focus,
+    &:hover {
+        @include box-color(null, #237023, transparent);
+    }
+    &:active {
+        @include box-color(null, #436d43, transparent);
+    }
+    &.disabled {
+        @include box-color($white, #2b7c2b, transparent);
+    }
+}
+
+//（警告）Warning
+.btn_warning {
+    @include box-color($white, #e78c06, transparent);
+    &:focus,
+    &:hover {
+        @include box-color(null, #d48004, transparent);
+    }
+    &:active {
+        @include box-color(null, #c98018, transparent);
+    }
+    &.disabled {
+        @include box-color($white, #e78c06, transparent);
+    }
+}
+
+//（危险）Danger
+.btn_danger {
+    @include box-color($white, #b00, transparent);
+    &:focus,
+    &:hover {
+        @include box-color(null, #a40e0e, transparent);
+    }
+    &:active {
+        @include box-color(null, #933434, transparent);
+    }
+    &.disabled {
+        @include box-color($white, #b00, transparent);
+    }
+}
+
+//（一般信息）Info
+.btn_info {
+    @include box-color(#346187, transparent, transparent);
+    &:focus,
+    &:hover {
+        @include box-color(null, #d9d9d9, transparent);
+    }
+    &:active {
+        @include box-color($white, #4e7ba8, transparent);
+    }
+    &.disabled {
+        @include box-color(#346187, transparent, transparent);
+    }
+}
+
+.btn_block {
+    display: block;
+}
+
+// Vertically space out multiple block buttons
+.btn_block+.btn_block {
+    margin-top: 5px;
+}

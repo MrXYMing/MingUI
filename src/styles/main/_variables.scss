@@ -1,0 +1,42 @@
+//行高
+$line-height-base: 1.428571429 !default;
+//边距
+$margin_xl: 48px !default;
+$margin_lg: 40px !default;
+$margin_default: 16px !default;
+$margin_s: 8px !default;
+$margin_xs: 4px !default;
+//主要颜色
+$base: #3f5161 !default;
+$brand1: #427cac !default;
+$brand2: #91C8F6 !default;
+$light_base: #eff4f9 !default;
+$background: #ebebeb !default;
+//语义颜色 
+$negative: #b00 !default;
+$critical: #e78c07 !default;
+$postive: #2b7d2b !default;
+$neutral: #5e696e !default;
+//灰阶颜色（主要用于文本）
+$gray1: #333 !default;
+$gray2: #666 !default;
+$gray3: #bfbfbf !default;
+$gray4: #ccc !default;
+$gray5: #e5e5e5 !default;
+$white: #fff !default;
+//文本大小
+$font_size_h1: 28px !default;
+$font_size_h2: 22px !default;
+$font_size_h3: 20px !default;
+$font_size_h4: 18px !default;
+$font_size_lg: 16px !default;
+$font_size_md: 14px !default;
+$font_size_s: 12px !default;
+
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;

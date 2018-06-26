@@ -1,0 +1,10 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/main.css" media="main, projection" rel="stylesheet" type="text/css" /> */
+
+@import "./reset";
+@import "./main/variables";
+@import "./main/mixins";
+
+@import "./main/partials/button";
