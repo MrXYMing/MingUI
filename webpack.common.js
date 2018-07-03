@@ -1,19 +1,18 @@
-const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: {
-        index: './src/scripts/index.js'
-    },
-    output: {
-        filename: 'main.js',
-        //filename: '[name].[hash].js',
-        //chunkFilename: '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist'),
-        library: "style",
-        libraryTarget: 'umd'
-    },
+    // entry: {
+    //     index: './src/scripts/index.js'
+    // },
+    // output: {
+    //     filename: 'main.js',
+    //     //filename: '[name].[hash].js',
+    //     //chunkFilename: '[name].[hash].js',
+    //     path: path.resolve(__dirname, 'dist'),
+    //     library: "style",
+    //     libraryTarget: 'umd'
+    // },
     module: {
         rules: [
             {

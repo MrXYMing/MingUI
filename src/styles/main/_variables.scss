@@ -1,5 +1,5 @@
 //行高
-$line-height-base: 1.428571429 !default;
+$line_height_base: 1.428571429 !default;
 //边距
 $margin_xl: 48px !default;
 $margin_lg: 40px !default;
@@ -13,9 +13,9 @@ $brand2: #91C8F6 !default;
 $light_base: #eff4f9 !default;
 $background: #ebebeb !default;
 //语义颜色 
-$negative: #b00 !default;
-$critical: #e78c07 !default;
-$postive: #2b7d2b !default;
+$danger: #b00 !default;
+$warning: #e78c06 !default;
+$success: #2b7c2b !default;
 $neutral: #5e696e !default;
 //灰阶颜色（主要用于文本）
 $gray1: #333 !default;
@@ -34,9 +34,38 @@ $font_size_md: 14px !default;
 $font_size_s: 12px !default;
 
 
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
+$padding_base_vertical:     6px !default;
+$padding_base_horizontal:   12px !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border_radius_base:        4px !default;
+$border_radius_large:       6px !default;
+$border_radius_small:       3px !default;
+
+
+
+/****Button****/
+$btn_default_color:              #0070b1 !default;
+$btn_default_bg:                 #f7f7f7 !default;
+$btn_default_border:             $gray3 !default;
+
+$btn_primary_color:              $white !default;
+$btn_primary_bg:                 #5495cd !default;
+$btn_primary_border:             transparent !default;
+
+$btn_success_color:              $white !default;
+$btn_success_bg:                 $success !default;
+$btn_success_border:             transparent !default;
+
+$btn_warning_color:                 $white !default;
+$btn_warning_bg:                    $warning !default;
+$btn_warning_border:                transparent !default;
+
+$btn_danger_color:              $white !default;
+$btn_danger_bg:                 $danger !default;
+$btn_danger_border:             transparent !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn_border_radius_base:         $border_radius_base !default;
+$btn_border_radius_large:        $border_radius_large !default;
+$btn_border_radius_small:        $border_radius_small !default;
+/****Button End****/

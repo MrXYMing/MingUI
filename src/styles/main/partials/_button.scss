@@ -9,9 +9,9 @@
     border: 1px solid transparent;
     white-space: nowrap;
     @include user-select(none);
-    @include button-size($padding-base-vertical, $padding-base-horizontal, $font_size_md, $line-height-base, $border-radius-base);
+    @include button-size($padding_base_vertical, $padding_base_horizontal, $font_size_md, $line_height_base, $btn_border_radius_base);
 
-    @extend .btn_default;
+    @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border);
     &.disabled {
         opacity: .5;
         cursor: not-allowed;
@@ -20,77 +20,82 @@
 
 //（默认样式）Default
 .btn_default {
-    @include box-color(#0070b1, #f7f7f7, $gray3);
-    &:focus,
-    &:hover {
-        @include box-color($white, $brand1, transparent);
-    }
-    &:active {
-        @include box-color($white, #346187, transparent);
-    }
-    &.disabled {
-        @include box-color(#0070b1, #f7f7f7, $gray3);
-    }
+    @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border);
+    // @include box-color(#0070b1, #f7f7f7, $gray3);
+    // &:focus,
+    // &:hover {
+    //     @include box-color($white, $brand1, transparent);
+    // }
+    // &:active {
+    //     @include box-color($white, #346187, transparent);
+    // }
+    // &.disabled {
+    //     @include box-color(#0070b1, #f7f7f7, $gray3);
+    // }
 }
 
 //（首选项）Primary
 .btn_primary {
-    @include box-color($white, #5495cd, transparent);
-    &:focus,
-    &:hover {
-        @include box-color(null, #367cb7, transparent);
-    }
-    &:active {
-        @include box-color(null, $brand1, transparent);
-    }
-    &.disabled {
-        @include box-color($white, #5495cd, transparent);
-    }
+    @include button-variant($btn_primary_color, $btn_primary_bg, $btn_primary_border);
+    // @include box-color($white, #5495cd, transparent);
+    // &:focus,
+    // &:hover {
+    //     @include box-color(null, #367cb7, transparent);
+    // }
+    // &:active {
+    //     @include box-color(null, $brand1, transparent);
+    // }
+    // &.disabled {
+    //     @include box-color($white, #5495cd, transparent);
+    // }
 }
 
 //（成功）Success
 .btn_success {
-    @include box-color($white, #2b7c2b, transparent);
-    &:focus,
-    &:hover {
-        @include box-color(null, #237023, transparent);
-    }
-    &:active {
-        @include box-color(null, #436d43, transparent);
-    }
-    &.disabled {
-        @include box-color($white, #2b7c2b, transparent);
-    }
+    @include button-variant($btn_success_color, $btn_success_bg, $btn_success_border);
+    // @include box-color($white, #2b7c2b, transparent);
+    // &:focus,
+    // &:hover {
+    //     @include box-color(null, #237023, transparent);
+    // }
+    // &:active {
+    //     @include box-color(null, #436d43, transparent);
+    // }
+    // &.disabled {
+    //     @include box-color($white, #2b7c2b, transparent);
+    // }
 }
 
 //（警告）Warning
 .btn_warning {
-    @include box-color($white, #e78c06, transparent);
-    &:focus,
-    &:hover {
-        @include box-color(null, #d48004, transparent);
-    }
-    &:active {
-        @include box-color(null, #c98018, transparent);
-    }
-    &.disabled {
-        @include box-color($white, #e78c06, transparent);
-    }
+    @include button-variant($btn_warning_color, $btn_warning_bg, $btn_warning_border);
+    // @include box-color($white, #e78c06, transparent);
+    // &:focus,
+    // &:hover {
+    //     @include box-color(null, #d48004, transparent);
+    // }
+    // &:active {
+    //     @include box-color(null, #c98018, transparent);
+    // }
+    // &.disabled {
+    //     @include box-color($white, #e78c06, transparent);
+    // }
 }
 
 //（危险）Danger
 .btn_danger {
-    @include box-color($white, #b00, transparent);
-    &:focus,
-    &:hover {
-        @include box-color(null, #a40e0e, transparent);
-    }
-    &:active {
-        @include box-color(null, #933434, transparent);
-    }
-    &.disabled {
-        @include box-color($white, #b00, transparent);
-    }
+    @include button-variant($btn_danger_color, $btn_danger_bg, $btn_danger_border);
+    // @include box-color($white, #b00, transparent);
+    // &:focus,
+    // &:hover {
+    //     @include box-color(null, #a40e0e, transparent);
+    // }
+    // &:active {
+    //     @include box-color(null, #933434, transparent);
+    // }
+    // &.disabled {
+    //     @include box-color($white, #b00, transparent);
+    // }
 }
 
 //（一般信息）Info
@@ -105,6 +110,13 @@
     }
     &.disabled {
         @include box-color(#346187, transparent, transparent);
+        &:focus,
+        &:hover {
+            @include box-color(null, transparent, transparent);
+        }
+        &:active {
+            @include box-color(null, transparent, transparent);
+        }
     }
 }
 

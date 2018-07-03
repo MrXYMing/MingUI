@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -7,6 +8,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+    entry: {
+        index: './src/scripts/index.js'
+    },
+    output: {
+        filename: 'main.js',
+        //filename: '[name].[hash].js',
+        //chunkFilename: '[name].[hash].js',
+        path: path.resolve(__dirname, 'dist'),
+        library: "style",
+        libraryTarget: 'umd'
+    },
     module: {
         rules: [
             {
