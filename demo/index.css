@@ -4,7 +4,10 @@ body{
     color: #333;
     margin:3rem;
 }
-.example{
+.example_title{
+    margin-top:2rem;
+}
+.example_content{
     margin:.5rem 1rem;
 }
 p{

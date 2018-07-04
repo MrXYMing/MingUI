@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>demo</title>
-    
+
     <link rel="stylesheet" href="../dist/main.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
-<body style="margin:2rem;">
-    <div class="btn">（默认样式）Default</div>
-    <div class="btn btn_primary">（首选项）Primary</div>
-    <div class="btn btn_success">（成功）Success</div>
-    <div class="btn btn_warning">（警告）Warning</div>
-    <div class="btn btn_danger">（危险）Danger</div>
-    <div class="btn btn_info">（一般信息）Info</div>
+<body>
+    <h2 class="example_title">按钮</h2>
 
-    </br>
-    <p class="hello">测试导入资源</p>
-    </br>
-    <p>禁用</p>
-    </br>
+    <h3>预定义样式</h3>
+    <div class="example_content">
+        <div class="btn">（默认样式）Default</div>
+        <div class="btn btn_primary">（首选项）Primary</div>
+        <div class="btn btn_success">（成功）Success</div>
+        <div class="btn btn_warning">（警告）Warning</div>
+        <div class="btn btn_danger">（危险）Danger</div>
+        <div class="btn btn_info">（一般信息）Info</div>
+    </div>
 
-    <div class="btn disabled">（默认样式）Default</div>
-    <div class="btn btn_primary disabled">（首选项）Primary</div>
-    <div class="btn btn_success disabled">（成功）Success</div>
-    <div class="btn btn_warning disabled">（警告）Warning</div>
-    <div class="btn btn_danger disabled">（危险）Danger</div>
-    <div class="btn btn_info disabled">（一般信息）Info</div>
+    <h3>预定义样式 -- 禁用</h3>
+    <div class="example_content">
+        <div class="btn disabled">（默认样式）Default</div>
+        <div class="btn btn_primary disabled">（首选项）Primary</div>
+        <div class="btn btn_success disabled">（成功）Success</div>
+        <div class="btn btn_warning disabled">（警告）Warning</div>
+        <div class="btn btn_danger disabled">（危险）Danger</div>
+        <div class="btn btn_info disabled">（一般信息）Info</div>
+    </div>
+
+    <h2 class="example_title">标题</h2>
+    <p class="text_info">HTML 中的所有标题标签， &lt;h1&gt; 到 &lt;h6&gt; 均可使用。另外，还提供了 .h1 到 .h6 类</p>
+    <div class="example_content">
+        <h1>标题一 h1</h1>
+        <h2>标题二 h2</h2>
+        <h3>标题三 h3</h3>
+        <h4>标题四 h4</h4>
+        <h5>标题五 h5</h5>
+        <h6>标题六 h6</h6>
+    </div>
+
+    <h2 class="example_title">情境文本颜色</h2>
+    <div class="example_content">
+        <p class="text_muted">（默认样式）text_muted</p>
+        <p class="text_primary">（首选项）text_primary</p>
+        <p class="text_success">（成功）text_success</p>
+        <p class="text_warning">（警告）text_warning</p>
+        <p class="text_danger">（危险）text_danger</p>
+        <p class="text_info">（一般信息）text_info</p>
+    </div>
+
+    <h2 class="example_title">情境背景色</h2>
+    <div class="example_content">
+        <p class="bg_primary">（首选项）bg_primary</p>
+        <p class="bg_success">（成功）bg_success</p>
+        <p class="bg_warning">（警告）bg_warning</p>
+        <p class="bg_danger">（危险）bg_danger</p>
+        <p class="bg_info">（一般信息）bg_info</p>
+    </div>
 
     <script src="../dist/main.js" charset="utf-8"></script>
     <script src="./index.js" charset="utf-8"></script>

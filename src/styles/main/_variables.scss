@@ -1,11 +1,5 @@
-//行高
-$line_height_base: 1.428571429 !default;
-//边距
-$margin_xl: 48px !default;
-$margin_lg: 40px !default;
-$margin_default: 16px !default;
-$margin_s: 8px !default;
-$margin_xs: 4px !default;
+//== 基础设置
+
 //主要颜色
 $base: #3f5161 !default;
 $brand1: #427cac !default;
@@ -16,7 +10,7 @@ $background: #ebebeb !default;
 $danger: #b00 !default;
 $warning: #e78c06 !default;
 $success: #2b7c2b !default;
-$neutral: #5e696e !default;
+$info: #5e696e !default;
 //灰阶颜色（主要用于文本）
 $gray1: #333 !default;
 $gray2: #666 !default;
@@ -24,24 +18,68 @@ $gray3: #bfbfbf !default;
 $gray4: #ccc !default;
 $gray5: #e5e5e5 !default;
 $white: #fff !default;
-//文本大小
+
+//字体尺寸
+$font_size_default: 14px !default;
+$font_size_l: 16px !default;
+$font_size_s: 12px !default;
+//标题字体尺寸
 $font_size_h1: 28px !default;
 $font_size_h2: 22px !default;
 $font_size_h3: 20px !default;
 $font_size_h4: 18px !default;
-$font_size_lg: 16px !default;
-$font_size_md: 14px !default;
-$font_size_s: 12px !default;
+$font_size_h5: $font_size_default !default;
+$font_size_h6: 12px !default;
 
-
-$padding_base_vertical:     6px !default;
-$padding_base_horizontal:   12px !default;
-
+//圆角
 $border_radius_base:        4px !default;
 $border_radius_large:       6px !default;
 $border_radius_small:       3px !default;
 
+//行高
+$line_height_base: 1.428571429 !default; // 20/14
+$line_height_computed:    floor(($font_size_default * $line_height_base)) !default; // ~20px
+$headings_font_family:    inherit !default;
+$headings_font_weight:    500 !default;
+$headings_line_height:    1.1 !default;
+$headings_color:          inherit !default;
+$headings_small_color:        $gray2 !default;
 
+//边距
+$margin_xl: 48px !default;
+$margin_lg: 40px !default;
+$margin_default: 16px !default;
+$margin_s: 8px !default;
+$margin_xs: 4px !default;
+$padding_base_vertical:     6px !default;
+$padding_base_horizontal:   12px !default;
+
+//层级
+$zindex_model_background:  1000 !default;
+$zindex_model:             1010 !default;
+$zindex_popover:           1020 !default;
+$zindex_tooltip:           1030 !default;
+
+//Media
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== 组件设置
 
 /****Button****/
 $btn_default_color:              #0070b1 !default;
@@ -64,8 +102,44 @@ $btn_danger_color:              $white !default;
 $btn_danger_bg:                 $danger !default;
 $btn_danger_border:             transparent !default;
 
-// Allows for customizing button radius independently from global border radius
+//radius
 $btn_border_radius_base:         $border_radius_base !default;
 $btn_border_radius_large:        $border_radius_large !default;
 $btn_border_radius_small:        $border_radius_small !default;
 /****Button End****/
+
+/****Label****/
+$label_default_bg:            $gray2 !default;
+$label_primary_bg:            $brand1 !default;
+$label_success_bg:            c !default;
+$label_info_bg:               $info !default;
+$label_warning_bg:            $warning !default;
+$label_danger_bg:             $danger !default;
+
+//** Default label text color
+$label-color:                 #fff !default;
+//** Default text color of a linked label
+$label-link-hover-color:      #fff !default;
+/****Label End****/
+
+/********/
+$state_primary_text:             $brand1 !default;
+$state_primary_bg:               $brand1 !default;
+$state_primary_border:           darken(adjust-hue($state_primary_bg, -10), 5%) !default;
+
+$state_success_text:             $success !default;
+$state_success_bg:               $success !default;
+$state_success_border:           darken(adjust-hue($state_success_bg, -10), 5%) !default;
+
+$state_info_text:                $info !default;
+$state_info_bg:                  $info !default;
+$state_info_border:              darken(adjust-hue($state_info_bg, -10), 7%) !default;
+
+$state_warning_text:             $warning !default;
+$state_warning_bg:               $warning !default;
+$state_warning_border:           darken(adjust-hue($state_warning_bg, -10), 5%) !default;
+
+$state_danger_text:              $danger !default;
+$state_danger_bg:                $danger !default;
+$state_danger_border:            darken(adjust-hue($state_danger_bg, -10), 5%) !default;
+/********/

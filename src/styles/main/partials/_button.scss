@@ -9,7 +9,7 @@
     border: 1px solid transparent;
     white-space: nowrap;
     @include user-select(none);
-    @include button-size($padding_base_vertical, $padding_base_horizontal, $font_size_md, $line_height_base, $btn_border_radius_base);
+    @include button-size($padding_base_vertical, $padding_base_horizontal, $font_size_default, $line_height_base, $btn_border_radius_base);
 
     @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border);
     &.disabled {

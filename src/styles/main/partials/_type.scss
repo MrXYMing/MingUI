@@ -1,0 +1,62 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings_font_family;
+  font-weight: $headings_font_weight;
+  line-height: $headings_line_height;
+  color: $headings_color;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: $headings_small_color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: $line_height_computed;
+  margin-bottom: ($line_height_computed / 2);
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: ($line_height_computed / 2);
+  margin-bottom: ($line_height_computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 { font-size: $font_size_h1; }
+h2, .h2 { font-size: $font_size_h2; }
+h3, .h3 { font-size: $font_size_h3; }
+h4, .h4 { font-size: $font_size_h4; }
+h5, .h5 { font-size: $font_size_h5; }
+h6, .h6 { font-size: $font_size_h6; }
+
+
+@include text-emphasis-variant('.text_muted', $gray2);
+@include text-emphasis-variant('.text_primary', $state_primary_text);
+@include text-emphasis-variant('.text_success', $state_success_text);
+@include text-emphasis-variant('.text_info', $state_info_text);
+@include text-emphasis-variant('.text_warning', $state_warning_text);
+@include text-emphasis-variant('.text_danger', $state_danger_text);
+
+
+.bg_primary {
+    color: #fff;
+}
+@include bg-variant('.bg_primary', $state_primary_bg);
+@include bg-variant('.bg_success', $state_success_bg);
+@include bg-variant('.bg_info', $state_info_bg);
+@include bg-variant('.bg_warning', $state_warning_bg);
+@include bg-variant('.bg_danger', $state_danger_bg);
