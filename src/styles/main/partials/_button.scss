@@ -10,7 +10,6 @@
     white-space: nowrap;
     @include user-select(none);
     @include button-size($padding_base_vertical, $padding_base_horizontal, $font_size_default, $line_height_base, $btn_border_radius_base);
-
     @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border);
     &.disabled {
         opacity: .5;
@@ -20,8 +19,7 @@
 
 //（默认样式）Default
 .btn_default {
-    @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border);
-    // @include box-color(#0070b1, #f7f7f7, $gray3);
+    @include button-variant($btn_default_color, $btn_default_bg, $btn_default_border); // @include box-color(#0070b1, #f7f7f7, $gray3);
     // &:focus,
     // &:hover {
     //     @include box-color($white, $brand1, transparent);
@@ -36,8 +34,7 @@
 
 //（首选项）Primary
 .btn_primary {
-    @include button-variant($btn_primary_color, $btn_primary_bg, $btn_primary_border);
-    // @include box-color($white, #5495cd, transparent);
+    @include button-variant($btn_primary_color, $btn_primary_bg, $btn_primary_border); // @include box-color($white, #5495cd, transparent);
     // &:focus,
     // &:hover {
     //     @include box-color(null, #367cb7, transparent);
@@ -52,8 +49,7 @@
 
 //（成功）Success
 .btn_success {
-    @include button-variant($btn_success_color, $btn_success_bg, $btn_success_border);
-    // @include box-color($white, #2b7c2b, transparent);
+    @include button-variant($btn_success_color, $btn_success_bg, $btn_success_border); // @include box-color($white, #2b7c2b, transparent);
     // &:focus,
     // &:hover {
     //     @include box-color(null, #237023, transparent);
@@ -68,8 +64,7 @@
 
 //（警告）Warning
 .btn_warning {
-    @include button-variant($btn_warning_color, $btn_warning_bg, $btn_warning_border);
-    // @include box-color($white, #e78c06, transparent);
+    @include button-variant($btn_warning_color, $btn_warning_bg, $btn_warning_border); // @include box-color($white, #e78c06, transparent);
     // &:focus,
     // &:hover {
     //     @include box-color(null, #d48004, transparent);
@@ -84,8 +79,7 @@
 
 //（危险）Danger
 .btn_danger {
-    @include button-variant($btn_danger_color, $btn_danger_bg, $btn_danger_border);
-    // @include box-color($white, #b00, transparent);
+    @include button-variant($btn_danger_color, $btn_danger_bg, $btn_danger_border); // @include box-color($white, #b00, transparent);
     // &:focus,
     // &:hover {
     //     @include box-color(null, #a40e0e, transparent);
@@ -105,8 +99,16 @@
     &:hover {
         @include box-color(null, #d9d9d9, transparent);
     }
-    &:active {
+    &:active,
+    &.active {
         @include box-color($white, #4e7ba8, transparent);
+    }
+    &.active {
+        &:hover,
+        &:focus,
+        &.focus {
+            @include box-color($white, #4e7ba8, transparent);
+        }
     }
     &.disabled {
         @include box-color(#346187, transparent, transparent);
@@ -118,6 +120,18 @@
             @include box-color(null, transparent, transparent);
         }
     }
+}
+
+.btn_lg {
+    @include button-size($padding_large_vertical, $padding_large_horizontal, $font_size_l, $line_height_large, $btn_border_radius_large);
+}
+
+.btn_sm {
+    @include button-size($padding_small_vertical, $padding_small_horizontal, $font_size_s, $line_height_small, $btn_border_radius_small);
+}
+
+.btn_xs {
+    @include button-size($padding_xs_vertical, $padding_xs_horizontal, $font_size_s, $line_height_small, $btn_border_radius_small);
 }
 
 .btn_block {

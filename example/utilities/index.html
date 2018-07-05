@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>辅助类demo</title>
+</head>
+
+<body>
+    <h2>辅助类</h2>
+    
+    <h3 class="example_title">快速浮动</h3>
+    <p class="text_info">.pull_left 和 .pull_right，可以将任意元素向左或向右浮动。</p>
+    <div class="example_content">
+        <div class="pull_right">pull_right</div>
+        <div class="pull_left">pull_left</div>
+    </div>
+
+    <h3 class="example_title">清除浮动</h3>
+    <p class="text_info">通过为父元素添加 .clearfix 类可以很容易地清除浮动（float）。</p>
+    <div class="example_content clearfix">
+        <div class="pull_right">pull_right</div>
+        <div class="pull_left">pull_left</div>
+    </div>
+
+    <h3 class="example_title">让内容块居中</h3>
+    <p class="text_info">使任意块元素水平居中</p>
+    <div class="example_content">
+        <div class="center_block bg_primary center_demo">这是个 250px 宽的块元素</div>
+    </div>
+
+    <h3 class="example_title">显示或隐藏内容</h3>
+    <p class="text_info">.show 和 .hidden 类可以强制任意元素显示或隐藏</p>
+    <div class="example_content">
+        <div class="btn" id="js_text_toggle">显示/隐藏</div>
+        <span class="show" id="text">这是一段文本</span>
+    </div>
+
+    <h3 class="example_title">图片替换</h3>
+    <p class="text_info">使用 .text_hide 类来隐藏文本，可以用来将元素的文本内容替换为一张背景图。</p>
+    <div class="example_content">
+        <p class="img">这是一段未使用 .text_hide 类的文本</p>
+        <p class="img text_hide">这是一段已使用 .text_hide 类的文本</p>
+    </div>
+</body>
+
+</html>

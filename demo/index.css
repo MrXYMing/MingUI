@@ -9,7 +9,21 @@ body{
 }
 .example_content{
     margin:.5rem 1rem;
+    border:1px solid #ccc;
+    padding:.5rem;
 }
 p{
     margin:.5rem 0;
+}
+.btn{
+    margin-bottom:.5rem;
+}
+
+.center_demo{
+    width:250px;
+}
+
+.img{
+    height:40px;
+    background: url(http://www.w3school.com.cn/i/eg_bg_04.gif);
 }

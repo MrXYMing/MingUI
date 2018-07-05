@@ -43,6 +43,25 @@ h4, .h4 { font-size: $font_size_h4; }
 h5, .h5 { font-size: $font_size_h5; }
 h6, .h6 { font-size: $font_size_h6; }
 
+// Alignment
+.text_left           { text-align: left; }
+.text_right          { text-align: right; }
+.text_center         { text-align: center; }
+//两端对齐
+.text_justify        { text-align: justify; }
+//不换行，默认换行
+.text_nowrap         { white-space: nowrap; }
+//超出显示省略符
+.text_overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Transformation
+.text_lowercase      { text-transform: lowercase; }
+.text_uppercase      { text-transform: uppercase; }
+.text_capitalize     { text-transform: capitalize; }
 
 @include text-emphasis-variant('.text_muted', $gray2);
 @include text-emphasis-variant('.text_primary', $state_primary_text);

@@ -1,0 +1,36 @@
+.clearfix {
+    @include clearfix;
+}
+.center_block {
+    @include center-block;
+}
+
+
+.pull_right {
+    float: right !important;
+}
+.pull_left {
+    float: left !important;
+}
+
+
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+.text_hide {
+    @include text-hide;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.affix {
+    position: fixed;
+}

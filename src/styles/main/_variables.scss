@@ -38,6 +38,9 @@ $border_radius_small:       3px !default;
 
 //行高
 $line_height_base: 1.428571429 !default; // 20/14
+$line_height_large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line_height_small:         1.5 !default;
+
 $line_height_computed:    floor(($font_size_default * $line_height_base)) !default; // ~20px
 $headings_font_family:    inherit !default;
 $headings_font_weight:    500 !default;
@@ -51,8 +54,18 @@ $margin_lg: 40px !default;
 $margin_default: 16px !default;
 $margin_s: 8px !default;
 $margin_xs: 4px !default;
+
 $padding_base_vertical:     6px !default;
 $padding_base_horizontal:   12px !default;
+
+$padding_large_vertical:    10px !default;
+$padding_large_horizontal:  16px !default;
+
+$padding_small_vertical:    5px !default;
+$padding_small_horizontal:  10px !default;
+
+$padding_xs_vertical:       1px !default;
+$padding_xs_horizontal:     5px !default;
 
 //层级
 $zindex_model_background:  1000 !default;
