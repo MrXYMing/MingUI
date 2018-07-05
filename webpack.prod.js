@@ -16,7 +16,7 @@ module.exports = merge(common, {
         //filename: '[name].[hash].js',
         //chunkFilename: '[name].[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: "style",
+        library: "M",
         libraryTarget: 'umd'
     },
     module: {

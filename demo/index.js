@@ -5,7 +5,7 @@ for (var i = 0; i < btnElements.length; i += 1) {
             return; 
         }
         btnElements[num].addEventListener('click', function () {
-            style.sayHello(num);
+            M.sayHello(num);
         });
     })(i);
 }
