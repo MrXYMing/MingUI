@@ -1,4 +1,4 @@
-import * as style from '../../src/scripts/index.js';
+import * as M from '../../src/scripts/index.js';
 import './index.scss';
 
 /****测试 寄生式继承 */
@@ -14,7 +14,7 @@ function SubClass(name, time) {
     SuperClass.call(this, name);
     this.time = time;
 }
-style.inheritPrototype(SubClass, SuperClass);
+M.util.inheritPrototype(SubClass, SuperClass);
 SubClass.prototype.getTime = function () {
     document.write(this.time + '<br>');
 }
@@ -26,3 +26,4 @@ document.write(instance1.colors + '<br>');
 document.write(instance2.colors + '<br>');
 instance2.getName();
 instance2.getTime();
+/****测试 寄生式继承 END*/

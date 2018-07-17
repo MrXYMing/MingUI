@@ -1,8 +1,9 @@
 import '../styles/main.scss';
-import { inheritObject, inheritPrototype } from './base.js'
+import * as util from './util.js';
+import * as tool from './tool.js';
 
 let sayHello = function (num) {
     alert('hello: ' + num);
 }
 
-export { sayHello, inheritObject, inheritPrototype }
+export { sayHello, util, tool }
