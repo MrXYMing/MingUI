@@ -21,7 +21,7 @@ M.tool.addEvent(testPreventDefaultDom02,'click',function(e){
     M.tool.preventDefault(e);
 });
 /****测试 阻止默认行为 END*/
-
+ 
 /****测试 获取元素 */
 let testGetTargetDom = document.getElementById('testGetTarget');
 M.tool.addEvent(document,'click',function(e){
