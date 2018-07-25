@@ -1,0 +1,43 @@
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}
+
+@mixin input-size($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    #{$parent} {
+        height: $input-height;
+        padding: $padding-vertical $padding-horizontal;
+        font-size: $font-size;
+        line-height: $line-height;
+        border-radius: $border-radius;
+    }
+    select#{$parent} {
+        height: $input-height;
+        line-height: $input-height;
+    }
+    textarea#{$parent},
+    select[multiple]#{$parent} {
+        height: auto;
+    }
+}
+
+@mixin padding-variant($parent, $padding-vertical, $padding-horizontal) {
+    #{$parent} {
+        padding: $padding-vertical $padding-horizontal;
+    }
+}
+
+@mixin margin-variant($margin-vertical, $margin-horizontal) {
+    #{$parent} {
+        margin: $margin-vertical $margin-horizontal;
+    }
+}
+
+/* @mixin padding-size($padding-vertical, $padding-horizontal){
+    padding: $padding-vertical $padding-horizontal;
+}
+@mixin margin-size($margin-vertical, $margin-horizontal){
+    margin: $margin-vertical $margin-horizontal;
+} */

@@ -1,0 +1,24 @@
+@mixin box(){
+    display: inline-block;
+    font-size: $font_size_base;
+    line-height: $line_height_def;
+    border: 1px solid transparent;
+    border-radius: $border_radius_base;
+    text-align: center;
+    vertical-align: middle;
+    padding: $padding_base_vertical $padding_base_horizontal;
+}
+
+@mixin box-input(){
+    display: block;
+    width:100%;
+    height: $input_height_base;
+    padding: $input_padding_base_vertical $input_padding_base_horizontal;
+    font-size: $font_size_base;
+    line-height: $line_height_base;
+    border: 1px solid transparent;
+}
+
+@mixin box-panel(){
+
+}

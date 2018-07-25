@@ -1,0 +1,27 @@
+//主要颜色
+$base: #3f5161 !default;
+$brand1: #427cac !default;
+$brand2: #91C8F6 !default;
+$light_base: #eff4f9 !default;
+$background: #ebebeb !default;
+//灰阶颜色（主要用于文本）
+$gray1: #333 !default;
+$gray2: #666 !default;
+$gray3: #bfbfbf !default;
+$gray4: #ccc !default;
+$gray5: #e5e5e5 !default;
+
+// -> 组件
+/****button主色调****/
+$btn_default_color:              #fff !default;
+$btn_default_bg:                 #5496cd !default;
+$btn_default_border:             transparent !default;
+
+$btn_default_hover_color:        #fff !default;
+$btn_default_hover_bg:           #598eba !default;
+$btn_default_hover_border:       transparent !default;
+
+$btn_default_active_color:       #fff !default;
+$btn_default_active_bg:          $brand1 !default;
+$btn_default_active_border:      transparent !default;
+/****button主色调 end****/

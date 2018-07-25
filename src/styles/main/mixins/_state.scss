@@ -1,0 +1,36 @@
+@mixin disabled() {
+    // &.disabled,
+    // &[disabled] {
+    //     color: $color;
+    //     background-color: $background;
+    //     border-color: $border;
+    //     &:hover,
+    //     &:focus,
+    //     &.focus {
+    //         color: $color;
+    //         background-color: $background;
+    //         border-color: $border;
+    //     }
+    // }
+    &.disabled,
+    &[disabled]  {
+        @include opacity(.5);
+        cursor: not-allowed;
+    }
+}
+
+@mixin active(){
+
+}
+
+@mixin focus(){
+
+}
+
+@mixin readonly(){
+    &.readonly,
+    &[readonly]  {
+        @include opacity(.5);
+        cursor: default;
+    }
+}

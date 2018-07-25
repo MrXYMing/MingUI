@@ -1,0 +1,79 @@
+@mixin button-variant($color, $background, $border, $color-hover, $background-hover, $border-hover, $color-active, $background-active, $border-active) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &.focus {
+        color: $color-hover;
+        background-color: $background-hover;
+        border-color: $border-hover;
+    }
+    &:hover {
+        color: $color-hover;
+        background-color: $background-hover;
+        border-color: $border-hover;
+    }
+    &:active,
+    &.active {
+        color: $color-active;
+        background-color: $background-active;
+        border-color: $border-active;
+        background-image: none;
+    }
+    &.active {
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color-active;
+            background-color: $background-active;
+            border-color: $border-active;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}
+
+@mixin input-variant($color, $background, $border, $color-hover, $background-hover, $border-hover, $color-focus, $background-focus, $border-focus) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:hover {
+        color: $color-hover;
+        background-color: $background-hover;
+        border-color: $border-hover;
+    }
+    &:focus,
+    &[focus] {
+        color: $color-focus;
+        background-color: $background-focus;
+        border-color: $border-focus;
+        // outline: 0;
+        // @include box-shadow($shadow);
+    }
+    &.disabled,
+    &[disabled] {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}
+
+@mixin panel-variant($color, $background, $border, $color-hover, $background-hover, $border-hover, $color-active, $background-active, $border-active) {}

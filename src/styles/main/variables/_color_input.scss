@@ -1,0 +1,18 @@
+$placeholder:    #757575 !default;
+
+// -> 组件
+/****input主色调****/
+$input_default_color:              #000 !default;
+$input_default_bg:                 #fff !default;
+$input_default_border:             $gray3 !default;
+
+$input_default_hover_color:        #000 !default;
+$input_default_hover_bg:           #fff !default;
+$input_default_hover_border:       rgba(65, 124, 172, 0.5) !default;
+
+$input_default_focus_color:        #000 !default;
+$input_default_focus_bg:           #fff !default;
+$input_default_focus_border:       $brand1 !default;
+
+$input_color_placeholder:          $placeholder;
+/****input主色调 end****/

@@ -1,0 +1,48 @@
+//语义颜色 
+$danger: #b00 !default;
+$warning: #e78c06 !default;
+$success: #2b7c2b !default;
+$info: #5e696e !default;
+
+// -> 组件
+/****button状态值****/
+$btn_negative_color:                #cae4fb !default;
+$btn_negative_bg:                   transparent !default;
+$btn_negative_border:               transparent !default;
+$btn_negative_hover_color:          #cae4fb !default;
+$btn_negative_hover_bg:             $base !default;
+$btn_negative_hover_border:         transparent !default;
+$btn_negative_active_color:         #2f3c48 !default;
+$btn_negative_active_bg:            #9bc7f2 !default;
+$btn_negative_active_border:        transparent !default;
+
+$btn_success_color:                #fff !default;
+$btn_success_bg:                   $success !default;
+$btn_success_border:               transparent !default;
+$btn_success_hover_color:          #fff !default;
+$btn_success_hover_bg:             #237023 !default;
+$btn_success_hover_border:         transparent !default;
+$btn_success_active_color:         #fff !default;
+$btn_success_active_bg:            #436d43 !default;
+$btn_success_active_border:        transparent !default;
+
+$btn_warning_color:                 #fff !default;
+$btn_warning_bg:                     $warning !default;
+$btn_warning_border:                 transparent !default;
+$btn_warning_hover_color:           #fff !default;
+$btn_warning_hover_bg:              #D48004 !default;
+$btn_warning_hover_border:          transparent !default;
+$btn_warning_active_color:          #fff !default;
+$btn_warning_active_bg:             #C98018 !default;
+$btn_warning_active_border:         transparent !default;
+
+$btn_danger_color:                   #fff !default;
+$btn_danger_bg:                       $danger !default;
+$btn_danger_border:                   transparent !default;
+$btn_danger_hover_color:              #fff !default;
+$btn_danger_hover_bg:                 #A40E0E !default;
+$btn_danger_hover_border:             transparent !default;
+$btn_danger_active_color:             #fff !default;
+$btn_danger_active_bg:                #933434 !default;
+$btn_danger_active_border:            transparent !default;
+/****button状态值 end****/

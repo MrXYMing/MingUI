@@ -1,34 +1,19 @@
 //== 基础设置
 
-//主要颜色
-$base: #3f5161 !default;
-$brand1: #427cac !default;
-$brand2: #91C8F6 !default;
-$light_base: #eff4f9 !default;
-$background: #ebebeb !default;
-//语义颜色 
-$danger: #b00 !default;
-$warning: #e78c06 !default;
-$success: #2b7c2b !default;
-$info: #5e696e !default;
-//灰阶颜色（主要用于文本）
-$gray1: #333 !default;
-$gray2: #666 !default;
-$gray3: #bfbfbf !default;
-$gray4: #ccc !default;
-$gray5: #e5e5e5 !default;
-$white: #fff !default;
+@import './variables/color_base';
+@import './variables/color_input';
+@import './variables/color_state';
 
 //字体尺寸
-$font_size_default: 14px !default;
-$font_size_l: 16px !default;
-$font_size_s: 12px !default;
+$font_size_base: 14px !default;
+$font_size_large: 16px !default;
+$font_size_small: 12px !default;
 //标题字体尺寸
 $font_size_h1: 28px !default;
 $font_size_h2: 22px !default;
 $font_size_h3: 20px !default;
 $font_size_h4: 18px !default;
-$font_size_h5: $font_size_default !default;
+$font_size_h5: $font_size_base !default;
 $font_size_h6: 12px !default;
 
 //圆角
@@ -37,11 +22,12 @@ $border_radius_large:       6px !default;
 $border_radius_small:       3px !default;
 
 //行高
+$line_height_def:           1 !default;
 $line_height_base: 1.428571429 !default; // 20/14
 $line_height_large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line_height_small:         1.5 !default;
 
-$line_height_computed:    floor(($font_size_default * $line_height_base)) !default; // ~20px
+$line_height_computed:    floor(($font_size_base * $line_height_base)) !default; // ~20px
 $headings_font_family:    inherit !default;
 $headings_font_weight:    500 !default;
 $headings_line_height:    1.1 !default;
@@ -55,7 +41,7 @@ $margin_default: 16px !default;
 $margin_s: 8px !default;
 $margin_xs: 4px !default;
 
-$padding_base_vertical:     6px !default;
+$padding_base_vertical:     5px !default;
 $padding_base_horizontal:   12px !default;
 
 $padding_large_vertical:    10px !default;
@@ -74,47 +60,27 @@ $zindex_popover:           1020 !default;
 $zindex_tooltip:           1030 !default;
 
 //Media
-$screen-xs:                  480px !default;
-$screen-xs-min:              $screen-xs !default;
-$screen-phone:               $screen-xs-min !default;
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
-$screen-lg:                  1200px !default;
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen_xs:                  480px !default;
+$screen_xs_min:              $screen_xs !default;
+$screen_phone:               $screen_xs_min !default;
+$screen_sm:                  768px !default;
+$screen_sm_min:              $screen_sm !default;
+$screen_tablet:              $screen_sm_min !default;
+$screen_md:                  992px !default;
+$screen_md_min:              $screen_md !default;
+$screen_desktop:             $screen_md_min !default;
+$screen_lg:                  1200px !default;
+$screen_lg_min:              $screen_lg !default;
+$screen_lg_desktop:          $screen_lg_min !default;
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen_xs_max:              ($screen_sm_min - 1) !default;
+$screen_sm_max:              ($screen_md_min - 1) !default;
+$screen_md_max:              ($screen_lg_min - 1) !default;
 
 
 //== 组件设置
 
 /****Button****/
-$btn_default_color:              #0070b1 !default;
-$btn_default_bg:                 #f7f7f7 !default;
-$btn_default_border:             $gray3 !default;
-
-$btn_primary_color:              $white !default;
-$btn_primary_bg:                 #5495cd !default;
-$btn_primary_border:             transparent !default;
-
-$btn_success_color:              $white !default;
-$btn_success_bg:                 $success !default;
-$btn_success_border:             transparent !default;
-
-$btn_warning_color:                 $white !default;
-$btn_warning_bg:                    $warning !default;
-$btn_warning_border:                transparent !default;
-
-$btn_danger_color:              $white !default;
-$btn_danger_bg:                 $danger !default;
-$btn_danger_border:             transparent !default;
-
 //radius
 $btn_border_radius_base:         $border_radius_base !default;
 $btn_border_radius_large:        $border_radius_large !default;
@@ -124,18 +90,18 @@ $btn_border_radius_small:        $border_radius_small !default;
 /****Label****/
 $label_default_bg:            $gray2 !default;
 $label_primary_bg:            $brand1 !default;
-$label_success_bg:            c !default;
+$label_success_bg:            $success !default;
 $label_info_bg:               $info !default;
 $label_warning_bg:            $warning !default;
 $label_danger_bg:             $danger !default;
 
 //** Default label text color
-$label-color:                 #fff !default;
+$label_color:                 #fff !default;
 //** Default text color of a linked label
-$label-link-hover-color:      #fff !default;
+$label_link_hover_color:      #fff !default;
 /****Label End****/
 
-/********/
+/****状态组****/
 $state_primary_text:             $brand1 !default;
 $state_primary_bg:               $brand1 !default;
 $state_primary_border:           darken(adjust-hue($state_primary_bg, -10), 5%) !default;
@@ -156,3 +122,32 @@ $state_danger_text:              $danger !default;
 $state_danger_bg:                $danger !default;
 $state_danger_border:            darken(adjust-hue($state_danger_bg, -10), 5%) !default;
 /********/
+
+/****Forms****/
+$input_border_radius:            $border_radius_base !default;
+$input_border_radius_large:      $border_radius_large !default;
+$input_border_radius_small:      $border_radius_small !default;
+
+$input_padding_base_vertical:     3px !default;
+$input_padding_base_horizontal:   8px !default;
+$input_padding_large_vertical:     6px !default;
+$input_padding_large_horizontal:   12px !default;
+$input_padding_small_vertical:     2px !default;
+$input_padding_small_horizontal:   4px !default;
+
+$input_height_base:              ($line_height_computed + ($input_padding_base_vertical * 2)) !default;
+$input_height_large:             (ceil($font_size_large * $line_height_large) + ($input_padding_large_vertical * 2)) !default;
+$input_height_small:             (floor($font_size_small * $line_height_small) + ($input_padding_small_vertical * 2)) !default;
+
+$form_group_margin_bottom:       15px !default;
+
+$input_border:                   $gray3 !default;
+
+$legend_color:                   $gray1 !default;
+$legend_border_color:            #e5e5e5 !default;
+
+$input_group_addon_bg:           $gray5 !default;
+$input_group_addon_border_color: $input_border !default;
+
+$cursor_disabled:                not-allowed !default;
+/****Forms End****/

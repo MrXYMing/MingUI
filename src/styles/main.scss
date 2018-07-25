@@ -3,10 +3,11 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/main.css" media="main, projection" rel="stylesheet" type="text/css" /> */
 
-@import "./reset";
 @import "./main/variables";
 @import "./main/mixins";
+@import "./reset";
 
 @import "./main/partials/button";
+@import "./main/partials/forms";
 @import "./main/partials/type";
 @import "./main/partials/utilities";

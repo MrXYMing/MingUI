@@ -1,0 +1,155 @@
+.form_group {
+    margin-bottom: $form-group-margin-bottom;
+    & fieldset {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+        // so we reset that to ensure it behaves more like a standard block element.
+        // See https://github.com/twbs/bootstrap/issues/12359.
+        min-width: 0;
+      }
+      
+    & legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: $line-height-computed;
+        font-size: ($font-size-base * 1.5);
+        line-height: inherit;
+        color: $legend-color;
+        border: 0;
+        border-bottom: 1px solid $legend-border-color;
+    }
+      
+    & label {
+        display: inline-block;
+        max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+}
+//States
+.has_success {
+    @include form-control-validation($state_success_text, $state_success_text, $state_success_bg);
+}
+.has_warning {
+    @include form-control-validation($state_warning_text, $state_warning_text, $state_warning_bg);
+}
+.has_error {
+    @include form-control-validation($state_danger_text, $state_danger_text, $state_danger_bg);
+}
+
+//input
+.form_control {
+    @include box-input();
+
+    @include input-variant($input_default_color, $input_default_bg, $input_default_border, $input_default_hover_color, $input_default_hover_bg, $input_default_hover_border, $input_default_focus_color, $input_default_focus_bg, $input_default_focus_border); 
+
+    background-image: none;
+    @include placeholder;
+    
+    //@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    @include disabled();
+    @include readonly();
+    fieldset[disabled] & {
+        opacity: .5;
+        cursor: $cursor_disabled;
+    }
+}
+textarea.form_control {
+    height: auto;
+}
+
+//Size
+@mixin form-group-size($input_height, $input_padding_vertical, $input_padding_horizontal, $font_size, $line_height){
+    .form_control {
+        height: $input_height;
+        padding: $input_padding_vertical $input_padding_horizontal;
+        font-size: $font_size;
+        line-height: $line_height;
+      }
+      select.form_control {
+        height: $input_height;
+        line-height: $line_height;
+      }
+      textarea.form_control,
+      select[multiple].form_control {
+        height: auto;
+      }
+}
+@include input-size('.input_sm', $input_height_small, $input_padding_small_vertical, $input_padding_small_horizontal, $font_size_small, $line_height_small, 0);
+.form_group_sm {
+    @include form-group-size($input_height_small, $input_padding_small_vertical, $input_padding_small_horizontal, $font_size_small, $line_height_small);
+}
+@include input-size('.input_lg', $input_height_large, $input_padding_large_vertical, $input_padding_large_horizontal, $font_size_large, $line_height_large, 0);
+.form_group_lg{
+    @include form-group-size($input_height_large, $input_padding_large_vertical, $input_padding_large_horizontal, $font_size_large, $line_height_large);
+}
+
+.help_block {
+    display: block; // account for any element using help-block
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: $gray2; // lighten the text some for contrast
+}
+
+.form_horizontal {
+    .form_group {
+        @include clearfix();
+        $control_label_width: 10%;
+        & .control_label{
+            float:left;
+            width: $control_label_width;
+            text-align: right;
+        }
+        & .form_control{
+            float:left;
+            width: 100%;
+        }
+        & .help_block{
+            float:left;
+        }
+        & .control_label+.form_control{
+            width: 100% - $control_label_width;
+        }
+        & .control_label+.form_control+.help_block{
+            margin-left: $control_label_width;
+        }
+    }
+
+  
+    @media (min-width: $screen_sm_min) {
+      .control_label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: ($input_padding_base_vertical + 1);
+        padding-right: $padding_base_horizontal;
+      }
+    }
+
+    .form_group_lg {
+      @media (min-width: $screen_sm_min) {
+        .control_label {
+          padding-top: ($input_padding_large_vertical + 1);
+          padding-right: $padding_large_horizontal;
+          font-size: $font_size_large;
+        }
+      }
+    }
+    .form_group_sm {
+      @media (min-width: $screen_sm_min) {
+        .control_label {
+          padding-top: ($input_padding_small_vertical + 1);
+          padding-right: $padding_small_horizontal;
+          font-size: $font_size_small;
+        }
+      }
+    }
+  }
+  
