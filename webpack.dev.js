@@ -65,6 +65,19 @@ module.exports = merge(common, {
                     loader: "sass-loader" // 将 Sass 编译成 CSS
                 }]
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/images',
+                            publicPath: '/assets/images'
+                        }
+                    }
+
+                ]
+            }
         ]
     },
     devtool: 'inline-source-map',

@@ -29,18 +29,6 @@ module.exports = {
                         //plugins: ['@babel/transform-runtime']
                     }
                 }
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            outputPath: 'assets/images'
-                        }
-                    }
-
-                ]
             }
         ]
     },
